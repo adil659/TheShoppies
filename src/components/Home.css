@@ -1,0 +1,25 @@
+.home__movies {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.home__header {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.home__searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.home__searchbar > input {
+    width: 75%;
+    padding: 10px;
+    margin: 0px 10px;
+}

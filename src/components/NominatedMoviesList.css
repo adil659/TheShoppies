@@ -1,0 +1,24 @@
+.nominated__movies {
+    width: 100%;
+}
+
+.nominated__movies__header {
+    margin-bottom: 20px;
+}
+.nominated__movies__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.nominated__movies_banner {
+    display: flex;
+    justify-content: center;
+    background-color: #1abc9c;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}

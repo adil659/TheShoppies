@@ -1,0 +1,27 @@
+.movie__nominated {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie__nominated__image {
+    opacity: 1;
+    transition: 0.5s ease;
+    object-fit: cover;
+    height: 400px;
+    width: 300px;
+}
+
+.movie__nominated__image:hover {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+
+
+.movie__details {
+    display: flex;
+}
+
+.movie__nominated > Button {
+    margin-top: 20px;
+}
