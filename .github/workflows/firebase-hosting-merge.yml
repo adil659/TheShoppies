@@ -21,3 +21,4 @@ jobs:
           projectId: theshoppies-7b17c
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
+          CI: ""
