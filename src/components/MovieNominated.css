@@ -1,5 +1,5 @@
 .movie__nominated {
-    margin: 0 20px;
+    margin: 20px 20px;
     display: flex;
     flex-direction: column;
 }
@@ -12,14 +12,19 @@
     width: 300px;
 }
 
-.movie__nominated__image:hover {
-    opacity: 0.3;
+.movie__nominated__select:hover {
     cursor: pointer;
+}
+
+.movie__nominated__select:hover .movie__nominated__image {
+    opacity: 0.3;
   }
 
 
 .movie__details {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .movie__nominated > Button {

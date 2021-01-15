@@ -4,6 +4,7 @@
 
 .nominated__movies__header {
     margin-bottom: 20px;
+    margin-left: 20px;
 }
 .nominated__movies__list {
     display: flex;

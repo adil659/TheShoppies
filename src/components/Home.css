@@ -7,10 +7,22 @@
 .home__header {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 10px 20px;
     padding: 10px 0;
 }
 
+.link {
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+.link:visited {
+    color: hotpink;
+}
+
+.link:hover {
+    color: #db0167;
+}
 .home__searchbar {
     display: flex;
     justify-content: center;
