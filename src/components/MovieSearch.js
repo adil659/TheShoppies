@@ -1,11 +1,12 @@
 import React from 'react'
 import './MovieSearch.css'
-import {useDispatch} from 'react-redux'
-import {addMovie} from '../reducers/movieReducer'
+import { useDispatch } from 'react-redux'
+import { addMovie } from '../reducers/movieReducer'
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom'
 
 
-function MovieSearch({movie, nominated}) {
+function MovieSearch({ movie, nominated }) {
 
     const dispatch = useDispatch()
 
@@ -18,20 +19,27 @@ function MovieSearch({movie, nominated}) {
     }
     return (
         <div className="movie">
+                <Link to={`/movies/${movie.imdbID}`}>
 
-            <img
-                src={movie.Poster}
-                alt="img" />
+            <div className="movie__select">
+                    <img
+                        src={movie.Poster}
+                        alt="img"
+                        className="movie__poster" />
 
-                <p>{movie.Title}</p>
-                <p>{movie.Year}</p>
-            
+                    <p>{movie.Title}</p>
+                    <p>{movie.Year}</p>
+
+            </div>
+            </Link>
+
             {
-                nominated ?             
-                <Button variant="contained" onClick={nominateMovie} disabled>Nominate</Button>
-                :
-                <Button variant="contained" color="primary" onClick={nominateMovie}>Nominate</Button>
+                nominated ?
+                    <Button variant="contained" onClick={nominateMovie} disabled>Nominate</Button>
+                    :
+                    <Button variant="contained" color="primary" onClick={nominateMovie}>Nominate</Button>
             }
+
         </div>
     )
 }

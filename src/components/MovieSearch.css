@@ -5,10 +5,26 @@
     margin: 30px 10px;
 }
 
-.movie > img {
+.movie__poster {
     object-fit: cover;
     height: 400px;
     width: 300px;
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+.movie__select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie__select:hover {
+    cursor: pointer;
+}
+
+.movie__select:hover .movie__poster {
+    opacity: 0.5;
 }
 
 .movie > Button {
