@@ -14,7 +14,7 @@
 .movie > Button {
     margin-top: 10px;
     width: 100%;
-    border-bottom: 3px solid lightgray;
-    border-left: 2px solid lightgray;
-    border-right: 2px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
 }

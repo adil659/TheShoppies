@@ -1,17 +1,20 @@
 
+import db from '../firebase'
+
 function movieReducer(state = [], action) {
 
 
     switch (action.type) {
-        case 'INIT_CARDS':
-            return state
+        case 'INIT_MOVIES':
+            return action.data
         case 'ADD_MOVIE':
             if(state.length >= 5) {
                 alert(`Cannot nominate more than 5`)
                 return state
             }
             else {
-            return [...state, action.data.movie]
+                db.collection('nominated_movies').doc(action.data.movie.imdbID).set(action.data.movie)
+                return [...state, action.data.movie]
             }
         case 'DELETE_MOVIE':
             console.log(`deleteing`)
@@ -22,8 +25,20 @@ function movieReducer(state = [], action) {
     }
 }
 
-
-
+export const initMovies = () => {
+    return async dispatch => {
+        db.collection('nominated_movies').onSnapshot((snapshot) => {
+            dispatch({
+                type: 'INIT_MOVIES',
+                data: snapshot.docs.map(doc => {
+                    return {
+                        ...doc.data()
+                    }
+                })
+            })
+        })
+    }
+}
 
 export const addMovie = (movie) => {
     return async dispatch => {
@@ -37,6 +52,7 @@ export const addMovie = (movie) => {
 }
 
 export const deleteMovie = (movie_id) => {
+    db.collection('nominated_movies').doc(movie_id).delete()
     return async dispatch => {
         dispatch({
             type: 'DELETE_MOVIE',

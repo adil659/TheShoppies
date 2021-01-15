@@ -30,7 +30,7 @@ function MovieSearch({movie, nominated}) {
                 nominated ?             
                 <Button variant="contained" onClick={nominateMovie} disabled>Nominate</Button>
                 :
-                <Button variant="contained" onClick={nominateMovie}>Nominate</Button>
+                <Button variant="contained" color="primary" onClick={nominateMovie}>Nominate</Button>
             }
         </div>
     )
