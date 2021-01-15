@@ -15,7 +15,7 @@ function App() {
   const searchTerm = useField('text')
 
   return (
-    <div className="App">
+    <div className="app" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/watercolor.png`}}>
      
       <Home></Home>
     </div>
