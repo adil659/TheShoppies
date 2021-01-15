@@ -57,7 +57,7 @@ function Home() {
                 <Switch>
                     <Route path='/movies/:movie_id'>
                         <div className="home__header">
-                            <Link to='/' onClick={e => searchTerm.setValue('')} className="link"><h1>The Shoppies</h1></Link>
+                            <Link to='/' onClick={e => searchTerm.setValue('')} className="link"><h1>The Shoppies 🏆</h1></Link>
                         </div>
                         <MovieDetails></MovieDetails>
                     </Route>
